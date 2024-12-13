@@ -1,18 +1,18 @@
 ---
-// You can add any imports or Astro props here if needed
+import Hero from './hero1.astro'
 ---
 
-<header class="w-full px-6 py-4 bg-white shadow-sm">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center">
-    <div class="text-xl font-bold">
+<header class="w-full absolute top-0 left-0 p-4">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center font-bold">
+    <div class="">
       <a href="/">
         <img src="/logo.png" alt="SCV Partners Logo" class="w-[80px]" />
       </a>
     </div>
 
-    <ul class="flex gap-6">
+    <ul class="flex gap-20 text-xl text-white font-bold">
       <li>
-        <a href="/company/greetings" class="hover:text-blue-600">회사소개</a>
+        <a href="/company" class="hover:text-blue-600">회사소개</a>
       </li>
       <li>
         <a href="/business" class="hover:text-blue-600">주주총회 컨설팅</a>

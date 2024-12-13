@@ -1,6 +1,10 @@
 ---
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
+import Hero from '../components/hero.astro'
+import Submenu from '../components/submenu.astro'
+
+const { bgImage, title } = Astro.props
 ---
 
 <!doctype html>
@@ -13,6 +17,8 @@ import Footer from '../components/footer.astro'
   </head>
   <body>
     <Header />
+    <Hero title={title} bgImage={bgImage} />
+    <Submenu />
     <slot />
     <Footer />
   </body>
