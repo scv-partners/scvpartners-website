@@ -2,6 +2,7 @@
 // No props are needed for now
 ---
 
+<!-- 
 <footer class="bg-white border-t border-gray-200">
   <div
     class="max-w-6xl container mx-auto px-4 flex flex-col md:flex-row gap-10 p-10"
@@ -32,22 +33,39 @@
     </div>
   </div>
   <!-- Scroll to Top Button -->
-  <div class="fixed bottom-4 right-4">
-    <button
-      class="w-12 h-12 bg-red-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-600 focus:outline-none"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+<div class="fixed bottom-4 right-4">
+  <button
+    class="w-12 h-12 bg-red-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-red-600 focus:outline-none"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"
-        ></path>
-      </svg>
-    </button>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"
+      ></path>
+    </svg>
+  </button>
+</div>
+-->
+
+<footer>
+  <div class="contain">
+    <div class="f-logo"><img src="/logo.png" alt="" /></div>
+    <div class="foot-wrap">
+      <address>
+        <span>서울 송파구 백제고분로 159 바위빌딩 4층</span>
+        <span>TEL : 02-2051-9114</span>
+        <span>FAX : 02-2051-5114</span>
+        <br />
+        <span class="copy"
+          >Copyright ⓒ (주)케이디엠홀딩스. All Right Reserved.</span
+        >
+      </address>
+    </div>
   </div>
 </footer>

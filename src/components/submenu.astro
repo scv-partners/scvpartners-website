@@ -1,5 +1,40 @@
-<div class="flex justify-center items-center text-white font-bold text-xl">
-  <div class="bg-red-500 px-24 py-4">인사말</div>
-  <div class="bg-gray-500 px-24 py-4">회사개요</div>
-  <div class="bg-gray-500 px-24 py-4">오시는길</div>
+---
+type MenuCategory = 'company' | 'business' | 'customer'
+const { category = 'company' } = Astro.props as { category: MenuCategory }
+
+const menus = {
+  company: [
+    { name: '인사말', link: '/company/greetings' },
+    { name: '회사개요', link: '/company/outline' },
+    { name: '오시는길', link: '/company/directions' },
+  ],
+  business: [
+    { name: '지역별 영업소', link: '/business/area' },
+    { name: '의결권 대행', link: '/business/success' },
+  ],
+  customer: [
+    { name: '고객센터', link: '/customer/data' },
+    { name: '공지사항', link: '/customer/notice' },
+  ],
+} as const
+
+const submenus = menus[category]
+---
+
+<div
+  class="-mt-8
+  flex
+  justify-center
+  items-center
+  text-white
+  font-bold
+  text-xl"
+>
+  {
+    submenus.map((menu) => (
+      <a href={menu.link}>
+        <div class="bg-red-500 px-24 py-4">{menu.name}</div>
+      </a>
+    ))
+  }
 </div>
