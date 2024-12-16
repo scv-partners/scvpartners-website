@@ -4,7 +4,7 @@ import Footer from '../components/footer.astro'
 import Hero from '../components/hero.astro'
 import Submenu from '../components/submenu.astro'
 
-const { bgImage, title } = Astro.props
+const { category } = Astro.props
 ---
 
 <!doctype html>
@@ -17,8 +17,8 @@ const { bgImage, title } = Astro.props
   </head>
   <body>
     <Header />
-    <Hero title={title} bgImage={bgImage} />
-    <Submenu />
+    <Hero category={category} />
+    <Submenu category={category} />
     <slot />
     <Footer />
   </body>
