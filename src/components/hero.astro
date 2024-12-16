@@ -3,9 +3,9 @@ type MenuCategory = 'company' | 'business' | 'customer'
 const { category = 'company' } = Astro.props as { category: MenuCategory }
 
 const bgImages = {
-  company: 'https://www.kdmholdings.co.kr/images/common/sv1.jpg',
-  business: 'https://www.kdmholdings.co.kr/images/common/sv2.jpg',
-  customer: 'https://www.kdmholdings.co.kr/images/common/sv3.jpg',
+  company: '/sv1.jpg',
+  business: '/sv2.jpg',
+  customer: '/sv3.jpg',
 }
 
 const bgImage = bgImages[category]
