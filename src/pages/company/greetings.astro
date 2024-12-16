@@ -3,7 +3,41 @@ import Layout from '../../layouts/layout.astro'
 ---
 
 <Layout category="company">
-  <div class="flex justify-center items-center h-screen">
-    <h1 class="text-4xl font-bold">인사말</h1>
+  <div class="max-w-6xl mx-auto flex flex-col items-center py-16">
+    <h1 class="text-4xl font-bold mb-16">인사말</h1>
+
+    <div class="container mx-auto flex flex-col md:flex-row gap-8 px-4">
+      <div class="md:w-1/2">
+        <img
+          src="/greetings.png"
+          alt="greeting"
+          class="w-full h-auto rounded-lg shadow-lg"
+        />
+      </div>
+
+      <div class="md:w-1/2">
+        <p class="leading-relaxed text-3xl font-bold">
+          안녕하십니까?
+          <br />
+          SCV 파트너스 대표 양영수입니다.
+        </p>
+        <p class="text-lg leading-relaxed mt-4">
+          까다로운 주주총회 아직도 걱정되시나요? 주주총회 의결권 확보 및 행사
+          대행 전문기업이 있습니다
+        </p>
+        <p class="text-lg leading-relaxed mt-4">
+          기업과 주주의 권익을 위한 주주총회 개최 및 안건 통과를 위해 주주들
+          집에 직접 방문하여 안건의 관한 자세한 설명 및 회사 입장을 대변하여
+          의결권을 위임 받아 기업이 사업에 전념할 수 있도록 종합적인 서비스를
+          제공합니다. 일반적인 사안(이사,감사 선임/정관변경 등) 뿐만 아니라
+          경영권 방어/우호지분 확보, 감자 등 기업의 민감한 업무 추진 시 주주의
+          동의가 필요하다면 전문기업에게 믿고 맡겨 주십시오 주주총회 당일 보안,
+          안내, 검수 및 법무, 공증 까지 토탈 서비스를 제공 드리며, 주주총회
+          이후에도 주요주주를 관리, 대응 함으로써 주주이탈 방지 및 주가 방어에도
+          기여합니다.
+        </p>
+        <p class="text-lg font-bold mt-4">대표이사 양영수</p>
+      </div>
+    </div>
   </div>
 </Layout>
