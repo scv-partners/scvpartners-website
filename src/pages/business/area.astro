@@ -3,7 +3,99 @@ import Layout from '../../layouts/layout.astro'
 ---
 
 <Layout category="business">
-  <div class="flex justify-center items-center">
+  <div class="max-w-6xl mx-auto flex flex-col items-center py-16">
     <h1 class="text-4xl font-bold">사업범위</h1>
+    <div
+      class="max-w-6xl w-full flex flex-col lg:flex-row items-start gap-8 p-10"
+    >
+      <!-- Main Circle - Shareholder's Meeting -->
+      <div
+        class="flex-shrink-0 rounded-full w-60 h-60 bg-red-500 flex items-center justify-center text-white text-center shadow-lg relative"
+      >
+        <div>
+          <h2 class="text-2xl font-semibold mb-2">주주총회</h2>
+          <ul class="text-sm leading-relaxed">
+            <li>의결권 모집</li>
+            <li>주주총회 시나리오</li>
+            <li>주총장 경호 및 보안</li>
+            <li>주주총회 전반 업무</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Connected Right Sections -->
+      <div class="flex flex-col gap-8 w-full">
+        <!-- Asset Operation -->
+        <div class="flex items-center gap-6">
+          <!-- Icon -->
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 shadow-md"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/000000/settings.png"
+              alt="icon"
+              class="w-8 h-8 opacity-70"
+            />
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">자산 운영</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              국내 및 해외자본유치 / 프로젝트 관리 및 추진 / 신규 프로젝트 발굴
+              / 리서치, 정보관리 / 특화된 투자전략
+            </p>
+          </div>
+        </div>
+
+        <!-- Structure Adjustment -->
+        <div class="flex items-center gap-6">
+          <!-- Icon -->
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 shadow-md"
+          >
+            <img
+              src="https://img.icons8.com/ios/50/000000/graph-report.png"
+              alt="icon"
+              class="w-8 h-8 opacity-70"
+            />
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">구조 조정</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              기업가치평가, 투자분석 / M&A 자문 / 워크아웃, 회사정리, 회의절차
+              대행 / 자산관리, 투자업체 Restructuring
+            </p>
+          </div>
+        </div>
+
+        <!-- Management Consulting -->
+        <div class="flex items-center gap-6">
+          <!-- Icon -->
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 shadow-md"
+          >
+            <img
+              src="https://img.icons8.com/ios/50/000000/briefcase.png"
+              alt="icon"
+              class="w-8 h-8 opacity-70"
+            />
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+              경영 컨설팅
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              NPL 평가, ABS 발행 자문 / 매매전략 자문 및 중개 / 자산실사 /
+              국내상장관련 업무·자문, 벤처 컨설팅
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
