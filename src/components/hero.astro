@@ -1,0 +1,29 @@
+---
+type MenuCategory = 'company' | 'business' | 'customer'
+const { category = 'company' } = Astro.props as { category: MenuCategory }
+
+const bgImages = {
+  company: '/sv1.jpg',
+  business: '/sv2.jpg',
+  customer: '/sv3.jpg',
+}
+
+const bgImage = bgImages[category]
+
+const titles = {
+  company: '회사소개',
+  business: '주주총회 컨설팅',
+  customer: '고객지원',
+}
+
+const title = titles[category]
+---
+
+<div
+  style={bgImage ? `background-image: url(${bgImage});` : ''}
+  class={`h-[400px] px-6 py-4 shadow-sm 
+    bg-center bg-no-repeat bg-cover
+    flex justify-center items-center`}
+>
+  <h1 class="text-4xl font-bold text-white">{title}</h1>
+</div>

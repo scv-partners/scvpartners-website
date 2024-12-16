@@ -1,0 +1,50 @@
+---
+const currentPath = Astro.url.pathname
+
+type MenuCategory = 'company' | 'business' | 'customer'
+const { category = 'company' } = Astro.props as { category: MenuCategory }
+
+const menus = {
+  company: [
+    { name: '인사말', link: '/company/greetings' },
+    { name: '회사개요', link: '/company/outline' },
+    { name: '오시는길', link: '/company/directions' },
+  ],
+  business: [
+    { name: '사업범위', link: '/business/area' },
+    { name: '의결권 대행', link: '/business/agencies' },
+    { name: '성공사례', link: '/business/success' },
+  ],
+  customer: [
+    { name: '공지사항', link: '/customer/notice' },
+    { name: '언론보도', link: '/customer/press' },
+    { name: '법률자료', link: '/customer/data' },
+  ],
+} as const
+
+const submenus = menus[category]
+---
+
+<div
+  class="-mt-8
+  flex
+  justify-center
+  items-center
+  text-white
+  font-bold
+  text-xl"
+>
+  {
+    submenus.map((menu) => (
+      <a href={menu.link}>
+        <div
+          class={`${
+            currentPath === menu.link ? 'bg-red-500' : 'bg-gray-500'
+          } px-24 py-4 border-l-2 border-white first:border-l-0`}
+        >
+          {menu.name}
+        </div>
+      </a>
+    ))
+  }
+</div>
