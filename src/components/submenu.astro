@@ -8,17 +8,18 @@ const menus = {
   company: [
     { name: '인사말', link: '/company/greetings' },
     { name: '회사개요', link: '/company/outline' },
-    { name: '오시는길', link: '/company/directions' },
+    { name: '사업소개', link: '/company/area' },
   ],
   business: [
-    { name: '사업범위', link: '/business/area' },
-    { name: '의결권 대행', link: '/business/agencies' },
-    { name: '성공사례', link: '/business/success' },
+    { name: '자사강점', link: '/business/strength' },
+    { name: '업무절차', link: '/business/process' },
+    { name: '수행사례', link: '/business/cases' },
+    { name: '주요분쟁사례', link: '/business/disputes' },
+    { name: '기타수행사례', link: '/business/success' },
   ],
   customer: [
+    { name: '오시는길', link: '/customer/directions' },
     { name: '공지사항', link: '/customer/notice' },
-    { name: '언론보도', link: '/customer/press' },
-    { name: '법률자료', link: '/customer/data' },
   ],
 } as const
 
@@ -39,7 +40,7 @@ const submenus = menus[category]
       <a href={menu.link}>
         <div
           class={`${
-            currentPath === menu.link ? 'bg-red-500' : 'bg-gray-500'
+            currentPath === menu.link ? 'bg-primary' : 'bg-gray-500'
           } px-24 py-4 border-l-2 border-white first:border-l-0`}
         >
           {menu.name}
