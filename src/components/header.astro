@@ -1,8 +1,13 @@
 ---
-import Hero from './hero1.astro'
+
 ---
 
-<header class="w-full absolute top-0 left-0 p-4 h-10">
+<header
+  class="w-full fixed top-0 left-0 h-20 p-3
+  border-b-[1px] border-gray-400
+  transition-colors duration-500
+  text-white"
+>
   <nav class="max-w-6xl mx-auto flex justify-between items-center font-bold">
     <div class="">
       <a href="/">
@@ -10,20 +15,28 @@ import Hero from './hero1.astro'
       </a>
     </div>
 
-    <ul class="flex gap-20 text-xl text-white font-bold">
+    <ul
+      class="flex justify-center items-center h-full gap-20 text-xl font-bold"
+    >
       <li>
-        <a href="/company" class="hover:text-primary">회사소개</a>
+        <a href="/company" class="hover:underline underline-offset-4"
+          >회사소개</a
+        >
       </li>
       <li>
-        <a href="/business" class="hover:text-primary">의결권대행</a>
+        <a href="/business" class="hover:underline underline-offset-4"
+          >의결권대행</a
+        >
       </li>
       <li>
-        <a href="/customer" class="hover:text-primary">고객지원</a>
+        <a href="/customer" class="hover:underline underline-offset-4"
+          >고객지원</a
+        >
       </li>
     </ul>
 
     <div>
-      <button class="p-2 hover:bg-gray-100 rounded-md" aria-label="Menu">
+      <button class="p-2 rounded-md" aria-label="Menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -41,3 +54,19 @@ import Hero from './hero1.astro'
     </div>
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector('header')
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('text-primary')
+      header.classList.remove('text-white')
+      header.classList.add('bg-white')
+    } else {
+      header.classList.remove('text-primary')
+      header.classList.add('text-white')
+      header.classList.remove('bg-white')
+    }
+  })
+</script>

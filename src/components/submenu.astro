@@ -40,8 +40,8 @@ const submenus = menus[category]
       <a href={menu.link}>
         <div
           class={`${
-            currentPath === menu.link ? 'bg-primary' : 'bg-gray-500'
-          } px-24 py-4 border-l-2 border-white first:border-l-0`}
+            currentPath.includes(menu.link) ? 'bg-primary' : 'bg-gray-500'
+          } px-24 py-4 border-l-2 border-white first:border-l-0 hover:underline underline-offset-4`}
         >
           {menu.name}
         </div>
