@@ -33,7 +33,7 @@ const submenus = menus[category]
   items-center
   text-white
   font-bold
-  text-xl"
+  text-sm md:text-xl"
 >
   {
     submenus.map((menu) => (
@@ -41,7 +41,9 @@ const submenus = menus[category]
         <div
           class={`${
             currentPath.includes(menu.link) ? 'bg-primary' : 'bg-gray-500'
-          } px-24 py-4 border-l-2 border-white first:border-l-0 hover:underline underline-offset-4`}
+          } px-6 py-3 md:px-24 md:py-4 
+           border-l-2 border-white first:border-l-0 
+           hover:underline underline-offset-4`}
         >
           {menu.name}
         </div>
