@@ -4,26 +4,9 @@ const currentPath = Astro.url.pathname
 type MenuCategory = 'company' | 'business' | 'customer'
 const { category = 'company' } = Astro.props as { category: MenuCategory }
 
-const menus = {
-  company: [
-    { name: '인사말', link: '/company/greetings' },
-    { name: '회사개요', link: '/company/outline' },
-    { name: '사업소개', link: '/company/area' },
-  ],
-  business: [
-    { name: '자사강점', link: '/business/strength' },
-    { name: '업무절차', link: '/business/process' },
-    { name: '수행사례', link: '/business/cases' },
-    { name: '주요분쟁사례', link: '/business/disputes' },
-    { name: '기타수행사례', link: '/business/success' },
-  ],
-  customer: [
-    { name: '오시는길', link: '/customer/directions' },
-    { name: '공지사항', link: '/customer/notice' },
-  ],
-} as const
+import { submenu } from './menu'
 
-const submenus = menus[category]
+const submenus = submenu[category]
 ---
 
 <div
@@ -33,17 +16,19 @@ const submenus = menus[category]
   items-center
   text-white
   font-bold
-  text-xl"
+  text-sm md:text-xl"
 >
   {
-    submenus.map((menu) => (
-      <a href={menu.link}>
+    submenus.map((item) => (
+      <a href={item.link}>
         <div
           class={`${
-            currentPath.includes(menu.link) ? 'bg-primary' : 'bg-gray-500'
-          } px-24 py-4 border-l-2 border-white first:border-l-0 hover:underline underline-offset-4`}
+            currentPath.includes(item.link) ? 'bg-primary' : 'bg-gray-500'
+          } px-6 py-3 md:px-10 md:py-4 
+           border-l-2 border-white first:border-l-0 
+           hover:underline underline-offset-4`}
         >
-          {menu.name}
+          {item.name}
         </div>
       </a>
     ))
