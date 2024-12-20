@@ -1,5 +1,5 @@
 ---
-
+import { menu, submenu } from './menu'
 ---
 
 <header
@@ -20,29 +20,23 @@
     </div>
 
     <ul
-      class="hidden md:visible flex justify-center items-center
+      class="md:flex hidden justify-center items-center
       h-full gap-20
       text-sm md:text-xl font-bold"
     >
-      <li>
-        <a href="/company" class="hover:underline underline-offset-4"
-          >회사소개</a
-        >
-      </li>
-      <li>
-        <a href="/business" class="hover:underline underline-offset-4"
-          >의결권대행</a
-        >
-      </li>
-      <li>
-        <a href="/customer" class="hover:underline underline-offset-4"
-          >고객지원</a
-        >
-      </li>
+      {
+        Object.keys(menu).map((key) => (
+          <li>
+            <a href={`/${key}`} class="hover:underline underline-offset-4">
+              {menu[key]}
+            </a>
+          </li>
+        ))
+      }
     </ul>
 
     <div>
-      <button class="p-2 rounded-md" aria-label="Menu">
+      <button id="menuButton" class="p-2 rounded-md" aria-label="Menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -59,20 +53,71 @@
       </button>
     </div>
   </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobileMenu"
+    class="fixed inset-y-0 right-0 w-1/2 bg-black bg-opacity-90 z-50 hidden"
+  >
+    <div class="flex justify-end p-4">
+      <button id="closeMenu" class="text-white p-2" aria-label="Close menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center h-full pt-16">
+      <ul class="flex flex-col gap-8 text-xl text-white">
+        {
+          Object.keys(menu).map((key) => (
+            <li>
+              <a href={`/${key}`} class="hover:underline underline-offset-4">
+                {menu[key]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <script>
   const header = document.querySelector('header')
+  const menuButton = document.getElementById('menuButton')
+  const mobileMenu = document.getElementById('mobileMenu')
+  const closeMenu = document.getElementById('closeMenu')
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
-      header.classList.add('text-primary')
-      header.classList.remove('text-white')
-      header.classList.add('bg-white')
+      header?.classList.add('text-primary')
+      header?.classList.remove('text-white')
+      header?.classList.add('bg-white')
     } else {
-      header.classList.remove('text-primary')
-      header.classList.add('text-white')
-      header.classList.remove('bg-white')
+      header?.classList.remove('text-primary')
+      header?.classList.add('text-white')
+      header?.classList.remove('bg-white')
     }
+  })
+
+  // Mobile menu toggle
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden')
+    document.body.style.overflow = 'hidden'
+  })
+
+  closeMenu?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden')
+    document.body.style.overflow = 'auto'
   })
 </script>
