@@ -2,7 +2,6 @@
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import Hero from '../components/hero.astro'
-import Submenu from '../components/submenu.astro'
 
 const { category } = Astro.props
 ---
@@ -18,7 +17,6 @@ const { category } = Astro.props
   <body>
     <Header />
     <Hero category={category} />
-    <Submenu category={category} />
     <slot />
     <Footer />
   </body>
