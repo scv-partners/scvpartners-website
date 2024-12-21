@@ -13,12 +13,10 @@ export const submenu = {
   business: [
     { name: '자사강점', link: '/business/strength' },
     { name: '업무절차', link: '/business/process' },
-    { name: '수행사례', link: '/business/cases' },
+    { name: '수행사례', link: '/business/success' },
     { name: '주요분쟁사례', link: '/business/disputes' },
-    { name: '기타수행사례', link: '/business/success' },
   ],
   customer: [
     { name: '오시는길', link: '/customer/directions' },
-    { name: '공지사항', link: '/customer/notice' },
   ],
 } as const

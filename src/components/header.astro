@@ -6,7 +6,7 @@ import { menu, submenu } from './menu'
   class="w-full fixed top-0 left-0 h-16 md:h-20 p-3
   border-b-[1px] border-gray-400
   transition-colors duration-500
-  text-white"
+  text-white group z-50"
 >
   <nav class="max-w-6xl mx-auto flex justify-between items-center font-bold">
     <div class="">
@@ -21,18 +21,44 @@ import { menu, submenu } from './menu'
 
     <ul
       class="md:flex hidden justify-center items-center
-      h-full gap-20
-      text-sm md:text-xl font-bold"
+      h-full gap-20 px-10
+      text-sm md:text-xl font-bold relative"
     >
       {
         Object.keys(menu).map((key) => (
-          <li>
+          <li class="group">
             <a href={`/${key}`} class="hover:underline underline-offset-4">
               {menu[key]}
             </a>
           </li>
         ))
       }
+
+      {/* Single mega menu for all items */}
+      <div
+        class="absolute hidden group-hover:block w-full left-0 top-full bg-white text-primary shadow-lg"
+      >
+        <div class="grid grid-cols-3 gap-8 p-8 text-base">
+          {
+            Object.keys(menu).map((key) => (
+              <div>
+                <ul class="space-y-2">
+                  {submenu[key].map((item) => (
+                    <li>
+                      <a
+                        href={item.link}
+                        class="hover:underline underline-offset-4"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </ul>
 
     <div>
@@ -80,10 +106,22 @@ import { menu, submenu } from './menu'
       <ul class="flex flex-col gap-8 text-xl text-white">
         {
           Object.keys(menu).map((key) => (
-            <li>
+            <li class="text-center">
               <a href={`/${key}`} class="hover:underline underline-offset-4">
                 {menu[key]}
               </a>
+              <ul class="mt-2 space-y-2 text-base text-gray-300">
+                {submenu[key].map((item) => (
+                  <li>
+                    <a
+                      href={item.link}
+                      class="hover:underline underline-offset-4"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))
         }
