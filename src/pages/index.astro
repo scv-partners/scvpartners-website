@@ -2,9 +2,15 @@
 import Layout from '../layouts/layout0.astro'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
+
+const seoData = {
+  title: 'SCV 파트너스 - 대한민국 1위 의결권 대행 전문회사',
+  description: '5년간 150+ 프로젝트 수행, 일반/특별결의 100% 성공률, 경영권분쟁 95% 성공률을 자랑하는 의결권 대행 전문회사. 주주총회, 경영권 방어, 위임장 확보 전문 서비스.',
+  canonical: 'https://scvpartners.kr/',
+}
 ---
 
-<Layout>
+<Layout {...seoData}>
   <Header />
   
   <!-- Hero Section -->

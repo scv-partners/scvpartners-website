@@ -1,0 +1,105 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title = 'SCV 파트너스 - 의결권 대행 전문회사',
+  description = '5년간 150+ 프로젝트 수행, 일반/특별결의 100% 성공률, 경영권분쟁 95% 성공률을 자랑하는 대한민국 1위 의결권 대행 전문회사입니다.',
+  canonical,
+  image = '/og-image.jpg',
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
+const imageURL = new URL(image, Astro.site).href;
+
+// Structured data for organization
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SCV 파트너스",
+  "alternateName": "에스씨브이파트너스",
+  "url": "https://scvpartners.kr",
+  "logo": "https://scvpartners.kr/scv-partners-logo.png",
+  "description": "주주총회 의결권 확보 및 행사 대행 전문기업",
+  "foundingDate": "2019",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "테헤란로6길 30 4층",
+    "addressLocality": "강남구",
+    "addressRegion": "서울시",
+    "addressCountry": "KR"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+82-2-556-2260",
+    "contactType": "customer service",
+    "availableLanguage": "Korean"
+  },
+  "sameAs": [
+    "https://scvpartners.kr"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SCV 파트너스",
+  "url": "https://scvpartners.kr",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://scvpartners.kr/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content="의결권 대행, 주주총회, 경영권 분쟁, 위임장 확보, 프록시파이트, 주주권리, SCV파트너스" />
+<meta name="author" content="SCV 파트너스" />
+<link rel="canonical" href={canonicalURL} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="SCV 파트너스" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={imageURL} />
+
+<!-- Additional Meta Tags -->
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#1e3a8a" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />

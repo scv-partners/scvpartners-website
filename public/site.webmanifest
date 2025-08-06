@@ -1,0 +1,24 @@
+{
+  "name": "SCV 파트너스 - 의결권 대행 전문회사",
+  "short_name": "SCV 파트너스",
+  "description": "대한민국 1위 의결권 대행 전문회사. 주주총회, 경영권 방어, 위임장 확보 전문 서비스.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1e3a8a",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "ko",
+  "orientation": "portrait-primary"
+}

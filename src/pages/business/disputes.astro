@@ -1,8 +1,15 @@
 ---
 import Layout from '../../layouts/layout.astro'
+
+const seoData = {
+  category: "business",
+  title: '주요분쟁사례 - SCV 파트너스 | 경영권분쟁 95% 성공률',
+  description: '에이아이비트, 소리바다, 연이비앤티 등 주요 경영권분쟁 성공사례. 95% 이상 성공률로 입증된 SCV 파트너스의 전문성을 확인하세요.',
+  canonical: 'https://scvpartners.kr/business/disputes/',
+}
 ---
 
-<Layout category="business">
+<Layout {...seoData}>
   <div class="max-w-6xl mx-auto flex flex-col items-center py-16 px-4">
     <h1 class="text-3xl md:text-4xl font-bold mb-16 text-center">주요분쟁사례</h1>
 

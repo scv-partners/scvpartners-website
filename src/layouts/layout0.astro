@@ -1,14 +1,31 @@
 ---
 import Footer from '../components/footer.astro'
+import SEO from '../components/SEO.astro'
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const { title, description, canonical, image, noindex } = Astro.props
 ---
 
 <!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>SCV 파트너스</title>
+    <SEO 
+      title={title}
+      description={description}
+      canonical={canonical}
+      image={image}
+      noindex={noindex}
+    />
   </head>
   <body>
     <slot />

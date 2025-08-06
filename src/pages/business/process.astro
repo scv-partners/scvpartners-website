@@ -1,8 +1,15 @@
 ---
 import Layout from '../../layouts/layout.astro'
+
+const seoData = {
+  category: "business",
+  title: '업무절차 - SCV 파트너스 | 전문적인 의결권 대행 프로세스',
+  description: '의뢰접수부터 사후관리까지 체계적인 4단계 프로세스. NDA 보안, 24시간 지원, 성공보수 시스템으로 안전한 의결권 대행 서비스.',
+  canonical: 'https://scvpartners.kr/business/process/',
+}
 ---
 
-<Layout category="business">
+<Layout {...seoData}>
   <div class="max-w-6xl mx-auto flex flex-col items-center py-16 px-4">
     <h1 class="text-3xl md:text-4xl font-bold mb-16 text-center">업무절차</h1>
 

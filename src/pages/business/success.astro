@@ -1,8 +1,15 @@
 ---
 import Layout from "../../layouts/layout.astro";
+
+const seoData = {
+  category: "business",
+  title: '수행사례 - SCV 파트너스 | 150+ 프로젝트 성공 기록',
+  description: '2018년부터 현재까지 150+ 프로젝트 완벽 수행. 일반/특별결의 100% 성공률, 35개 이상 고객사 포트폴리오를 확인하세요.',
+  canonical: 'https://scvpartners.kr/business/success/',
+}
 ---
 
-<Layout category="business">
+<Layout {...seoData}>
   <div class="max-w-6xl mx-auto flex flex-col items-center py-16 px-4">
     <h1 class="text-3xl md:text-4xl font-bold mb-16 text-center">수행사례</h1>
 

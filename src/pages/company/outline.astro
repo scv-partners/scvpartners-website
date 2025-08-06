@@ -1,8 +1,15 @@
 ---
 import Layout from "../../layouts/layout.astro";
+
+const seoData = {
+  category: "company",
+  title: '회사개요 - SCV 파트너스 | 2019년 설립 의결권 대행 전문기업',
+  description: '2019년 설립된 주주총회 의결권 확보 및 행사 대행 전문기업. 서울 강남구 소재, 양영수 대표이사, 전문적인 프록시 파이트 서비스 제공.',
+  canonical: 'https://scvpartners.kr/company/outline/',
+}
 ---
 
-<Layout category="company">
+<Layout {...seoData}>
   <div class="flex flex-col items-center py-16 px-4">
     <h1 class="text-3xl md:text-4xl font-bold mb-12 text-center">회사개요</h1>
 
@@ -13,7 +20,7 @@ import Layout from "../../layouts/layout.astro";
       >
         <img
           src="/scv-partners-logo.png"
-          alt="SCV 파트너스 Logo"
+          alt="SCV 파트너스 회사 로고 - 의결권 대행 전문기업"
           class="max-h-24"
         />
       </div>

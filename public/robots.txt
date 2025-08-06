@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://scvpartners.kr/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Block sensitive directories (none for this site)
+# Disallow: /admin/
+# Disallow: /private/
