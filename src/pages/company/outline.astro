@@ -1,76 +1,127 @@
 ---
-import Layout from '../../layouts/layout.astro'
+import Layout from "../../layouts/layout.astro";
 ---
 
 <Layout category="company">
-  <div class="flex flex-col items-center py-16">
-    <h1 class="text-3xl md:text-4xl font-bold mb-8">회사개요</h1>
+  <div class="flex flex-col items-center py-16 px-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-12 text-center">회사개요</h1>
 
-    <div class="max-w-6xl">
+    <div class="max-w-6xl w-full">
+      <!-- Company Logo Section -->
       <div
-        class="flex justify-center items-center
-        border border-gray-300
-        rounded-lg p-8"
+        class="flex justify-center items-center border border-gray-300 rounded-lg p-8 mb-8 bg-white shadow-sm"
       >
-        <img src="/logo.png" alt="" />
+        <img
+          src="/scv-partners-logo.png"
+          alt="SCV 파트너스 Logo"
+          class="max-h-24"
+        />
       </div>
 
-      <div class="mt-8">
-        <ul
-          class="grid grid-cols-1 md:grid-cols-2 gap-x-8 border-t-2 border-[#d84144]"
-        >
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
+      <!-- Company Information -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div class="bg-primary text-white p-6">
+          <h2 class="text-xl font-bold text-center">
+            ㈜에스씨브이파트너스 (SCV PARTNERS Co.,Ltd)
+          </h2>
+          <p class="text-center mt-2 opacity-90">
+            주주총회 의결권 확보 및 행사 대행 전문기업
+          </p>
+        </div>
+
+        <div class="p-6">
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                법인명
+              </div>
+              <div class="leading-relaxed text-gray-700">
+                ㈜에스씨브이파트너스 (SCV PARTNERS Co.,Ltd)
+              </div>
+            </li>
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                대표이사
+              </div>
+              <div class="leading-relaxed text-gray-700">양영수</div>
+            </li>
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                설립일
+              </div>
+              <div class="leading-relaxed text-gray-700">2019년 5월</div>
+            </li>
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                업종
+              </div>
+              <div class="leading-relaxed text-gray-700">기업 컨설팅</div>
+            </li>
+            <li
+              class="flex items-start py-4 border-b border-gray-200 md:col-span-2"
             >
-              대표이사
-            </div>
-            <div class="leading-relaxed">양 영 수</div>
-          </li>
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
-            >
-              설립일
-            </div>
-            <div class="leading-relaxed">2019년 5월</div>
-          </li>
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
-            >
-              업종
-            </div>
-            <div class="leading-relaxed">기업컨설팅</div>
-          </li>
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
-            >
-              주요업무
-            </div>
-            <div class="leading-relaxed">
-              주주총회 대행 / 의결권 Proxy업무 / M&amp;A / 자금조달 제휴사를
-              통한 세무·회계·법무 등 Total Service
-            </div>
-          </li>
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
-            >
-              주소
-            </div>
-            <div class="leading-relaxed">서울시 강남구 테헤란로6길 30. 4층</div>
-          </li>
-          <li class="flex items-center py-5 border-b border-gray-300">
-            <div
-              class="min-w-[120px] text-lg font-semibold text-[#242424] tracking-tight relative pl-8"
-            >
-              연락처
-            </div>
-            <div class="leading-relaxed">02-556-2260 (Fax: 02-556-2260 )</div>
-          </li>
-        </ul>
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight mt-1"
+              >
+                사업내용
+              </div>
+              <div class="leading-relaxed text-gray-700">
+                <div class="space-y-2">
+                  <div>• 주주총회 대행 / 의결권 Proxy업무</div>
+                  <div>• M&A / 자금조달</div>
+                  <div>• 제휴사를 통한 세무·회계·법무 등 Total Service</div>
+                </div>
+              </div>
+            </li>
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                소재지
+              </div>
+              <div class="leading-relaxed text-gray-700">
+                서울시 강남구 테헤란로6길 30. 4층
+              </div>
+            </li>
+            <li class="flex items-center py-4 border-b border-gray-200">
+              <div
+                class="min-w-[120px] text-lg font-semibold text-primary tracking-tight"
+              >
+                연락처
+              </div>
+              <div class="leading-relaxed text-gray-700">
+                <div>TEL: <a href="tel:02-556-2260" class="text-primary hover:underline">02-556-2260</a></div>
+                <div class="text-sm text-gray-500">
+                  EMAIL: <a href="mailto:zinaster@naver.com" class="text-primary hover:underline">zinaster@naver.com</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Key Statistics -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-primary/10 p-6 rounded-lg text-center">
+          <div class="text-3xl font-bold text-primary mb-2">100%</div>
+          <div class="text-sm text-gray-600">일반결의/특별결의 성공률</div>
+        </div>
+        <div class="bg-secondary/10 p-6 rounded-lg text-center">
+          <div class="text-3xl font-bold text-secondary mb-2">95%+</div>
+          <div class="text-sm text-gray-600">경영권 분쟁 성공률</div>
+        </div>
+        <div class="bg-accent/10 p-6 rounded-lg text-center">
+          <div class="text-3xl font-bold text-accent mb-2">150+</div>
+          <div class="text-sm text-gray-600">누적 프로젝트 수행</div>
+        </div>
       </div>
     </div>
   </div>

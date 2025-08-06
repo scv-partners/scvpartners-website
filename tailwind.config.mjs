@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#F26419',
-        'secondary': '#55DDE0',
-        'accent': '#F6AE2D',
+        'primary': '#1e3a8a',   // Darker professional blue
+        'secondary': '#374151', // Sophisticated dark gray
+        'accent': '#059669',    // Trustworthy dark green
       },
     },
   },

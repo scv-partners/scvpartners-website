@@ -1,19 +1,19 @@
 ---
-import { menu, submenu } from './menu'
+import { menu, submenu } from "./menu";
 ---
 
 <header
   class="w-full fixed top-0 left-0 h-16 md:h-20 p-3
-  border-b-[1px] border-gray-400
+  border-b-[1px] border-gray-200 bg-white
   transition-colors duration-500
-  text-white group z-50"
+  text-gray-800 z-50 shadow-sm"
 >
   <nav class="max-w-6xl mx-auto flex justify-between items-center font-bold">
     <div class="">
       <a href="/">
         <img
-          src="/logo.png"
-          alt="SCV Partners Logo"
+          src="/scv-partners-logo.png"
+          alt="SCV 파트너스 Logo"
           class="w-[60px] md:w-[80px]"
         />
       </a>
@@ -22,43 +22,31 @@ import { menu, submenu } from './menu'
     <ul
       class="md:flex hidden justify-center items-center
       h-full gap-20 px-10
-      text-sm md:text-xl font-bold relative"
+      text-sm md:text-xl font-bold"
     >
       {
         Object.keys(menu).map((key) => (
-          <li class="group">
-            <a href={`/${key}`} class="hover:underline underline-offset-4">
+          <li class="group relative">
+            <a href={`/${key}`} class="hover:text-primary transition-colors">
               {menu[key]}
             </a>
+            <div class="absolute hidden group-hover:block top-full left-0 bg-white border border-gray-200 shadow-lg rounded-lg min-w-48">
+              <ul class="py-2">
+                {submenu[key].map((item) => (
+                  <li>
+                    <a
+                      href={item.link}
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </li>
         ))
       }
-
-      {/* Single mega menu for all items */}
-      <div
-        class="absolute hidden group-hover:block w-full left-0 top-full bg-white text-primary shadow-lg"
-      >
-        <div class="grid grid-cols-3 gap-8 p-8 text-base">
-          {
-            Object.keys(menu).map((key) => (
-              <div>
-                <ul class="space-y-2">
-                  {submenu[key].map((item) => (
-                    <li>
-                      <a
-                        href={item.link}
-                        class="hover:underline underline-offset-4"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-        </div>
-      </div>
     </ul>
 
     <div>
@@ -131,31 +119,29 @@ import { menu, submenu } from './menu'
 </header>
 
 <script>
-  const header = document.querySelector('header')
-  const menuButton = document.getElementById('menuButton')
-  const mobileMenu = document.getElementById('mobileMenu')
-  const closeMenu = document.getElementById('closeMenu')
+  const header = document.querySelector("header");
+  const menuButton = document.getElementById("menuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
-      header?.classList.add('text-primary')
-      header?.classList.remove('text-white')
-      header?.classList.add('bg-white')
+      header?.classList.add("shadow-md");
+      header?.classList.remove("shadow-sm");
     } else {
-      header?.classList.remove('text-primary')
-      header?.classList.add('text-white')
-      header?.classList.remove('bg-white')
+      header?.classList.remove("shadow-md");
+      header?.classList.add("shadow-sm");
     }
-  })
+  });
 
   // Mobile menu toggle
-  menuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.remove('hidden')
-    document.body.style.overflow = 'hidden'
-  })
+  menuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
 
-  closeMenu?.addEventListener('click', () => {
-    mobileMenu?.classList.add('hidden')
-    document.body.style.overflow = 'auto'
-  })
+  closeMenu?.addEventListener("click", () => {
+    mobileMenu?.classList.add("hidden");
+    document.body.style.overflow = "auto";
+  });
 </script>

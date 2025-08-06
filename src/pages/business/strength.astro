@@ -3,104 +3,148 @@ import Layout from '../../layouts/layout.astro'
 ---
 
 <Layout category="business">
-  <div class="max-w-6xl mx-auto flex flex-col items-center py-16">
-    <h1 class="text-3xl md:text-4xl font-bold mb-16">자사 강점</h1>
+  <div class="max-w-6xl mx-auto flex flex-col items-center py-16 px-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-16 text-center">자사 강점</h1>
 
-    <!-- Top Image Banner -->
-    <div class="relative">
-      <img
-        src="/agencies.jpg"
-        alt="agencies"
-        class="w-full h-auto rounded-md shadow-lg"
-      />
-      <div
-        class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start px-8 bg-black bg-opacity-50 text-white"
-      >
-        <h2 class="text-2xl font-bold mb-2">전국 네트워크</h2>
-        <p class="text-sm">
-          전국 15개 시도에 주주총회 의결권대리 확보를 위한 촘촘한 네트워크망
-          구축
+    <!-- Success Rate Banner -->
+    <div class="w-full bg-primary text-white p-8 rounded-lg mb-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">검증된 전문성과 높은 성공률</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div class="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
+          <div class="text-3xl font-bold">100%</div>
+          <div class="text-sm opacity-90">일반결의/특별결의 성공률</div>
+        </div>
+        <div class="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
+          <div class="text-3xl font-bold">95%+</div>
+          <div class="text-sm opacity-90">경영권 분쟁 성공률</div>
+        </div>
+        <div class="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
+          <div class="text-3xl font-bold">5년+</div>
+          <div class="text-sm opacity-90">전문 운영 경험</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Strengths Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 w-full">
+      <!-- 오래되고 풍부한 경험 -->
+      <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary">오래되고 풍부한 경험</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          총책임자(대표)는 2006년도부터 위임장 관련 업무를 시작하여 회사 설립 후 지금까지 
+          5년째 전문적인 위임장대리 회사를 운영하고 있습니다. 매년 의뢰건수가 꾸준히 증가하고 있습니다.
+        </p>
+      </div>
+
+      <!-- 전문인력 다수보유 -->
+      <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary">전문인력 다수보유</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          위임 권유 현장 직원들은 한 해 20건 이상을 수행한 최소 5년 이상의 직원들이 대다수를 차지하여 
+          성공확률을 높이고 잡음을 최소화합니다. 비전문 인력으로 인한 주주들의 항의를 방지합니다.
+        </p>
+      </div>
+
+      <!-- 협력업체 네트워크 -->
+      <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-accent">협력업체 네트워크</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          다양한 회계법인, 컨설팅업체(M&A, 주식, 자금조달 및 경영컨설팅), IR업체와의 
+          파트너십을 통해 즉각적인 대응 및 정보 취득이 용이합니다.
+        </p>
+      </div>
+
+      <!-- 높은 성공률 -->
+      <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-green-600">높은 성공률</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          일반결의·특별결의(감자, 정관변경 등) 성공률 100%, 경영권분쟁 95% 이상의 
+          높은 성공률을 자랑합니다.
         </p>
       </div>
     </div>
 
-    <!-- Four Features -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      <!-- BEST -->
-      <div class="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md">
-        <div
-          class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/star--v1.png"
-            alt="best icon"
-            class="w-6 h-6 opacity-70"
-          />
-        </div>
-        <div>
-          <h3 class="text-primary font-bold text-lg mb-1">BEST</h3>
-          <p class="text-gray-600 text-sm">
-            원활한 주주총회진행을 위한 종합적인 컨설팅과 효율적인 업무수행
-          </p>
-        </div>
+    <!-- Additional Strengths -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- 안전성 -->
+      <div class="bg-blue-50 p-6 rounded-lg">
+        <h4 class="text-lg font-bold text-blue-700 mb-3">안전성</h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          계약금은 60~70% 수준으로 초기비용 부담을 줄이고, 안건 통과 시 잔금을 받는 구조로 
+          매일 누적현황 보고를 통해 신뢰성 및 안정성을 확인할 수 있습니다.
+        </p>
       </div>
 
-      <!-- EXCELLENCE -->
-      <div class="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md">
-        <div
-          class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/diamond.png"
-            alt="excellence icon"
-            class="w-6 h-6 opacity-70"
-          />
-        </div>
-        <div>
-          <h3 class="text-primary font-bold text-lg mb-1">EXCELLENCE</h3>
-          <p class="text-gray-600 text-sm">
-            관련 법률 검토를 통한 이슈분석, 솔루션 도출
-          </p>
-        </div>
+      <!-- 토탈 서비스 -->
+      <div class="bg-purple-50 p-6 rounded-lg">
+        <h4 class="text-lg font-bold text-purple-700 mb-3">토탈 서비스</h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          필요 시 언론 플레이, 자문변호사, 공증법인, 경비업체 및 주총당일 집계 및 
+          시나리오 등 토탈 서비스를 제공 가능합니다.
+        </p>
       </div>
+    </div>
 
-      <!-- SPECIALTY -->
-      <div class="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md">
-        <div
-          class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/handshake.png"
-            alt="specialty icon"
-            class="w-6 h-6 opacity-70"
-          />
+    <!-- Core Services Icons -->
+    <div class="w-full bg-gray-50 p-8 rounded-lg">
+      <h3 class="text-xl font-bold text-center mb-8 text-gray-800">핵심 서비스 영역</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h4 class="font-bold text-primary mb-2">의결권 위임장 확보</h4>
+          <p class="text-sm text-gray-600">전국 소액주주 직접 방문하여 의결권 위임장 확보</p>
         </div>
-        <div>
-          <h3 class="text-primary font-bold text-lg mb-1">SPECIALTY</h3>
-          <p class="text-gray-600 text-sm">
-            경험이 풍부한 전문인력의 효율적 의결권 모집 전문인력을 통한 전략적
-            주주총회 진행
-          </p>
-        </div>
-      </div>
 
-      <!-- TRUST -->
-      <div class="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md">
-        <div
-          class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/like.png"
-            alt="trust icon"
-            class="w-6 h-6 opacity-70"
-          />
+        <div class="text-center">
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h4 class="font-bold text-secondary mb-2">M&A 컨설팅</h4>
+          <p class="text-sm text-gray-600">전략 로드맵 수립, 운영전략 수집, 법률자문 제공</p>
         </div>
-        <div>
-          <h3 class="text-primary font-bold text-lg mb-1">TRUST</h3>
-          <p class="text-gray-600 text-sm">
-            지속적인 관리로 회사와 주주들에 대한 커뮤니티 형성으로 회사와
-            주주가치를 지속적으로 제고
-          </p>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+            </svg>
+          </div>
+          <h4 class="font-bold text-accent mb-2">주주총회 제반업무</h4>
+          <p class="text-sm text-gray-600">주주총회 상소절차 및 경주, 주주의결대행, 진행 및 보조</p>
         </div>
       </div>
     </div>

@@ -1,12 +1,338 @@
 ---
 import Layout from '../layouts/layout0.astro'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
 ---
 
 <Layout>
-  <div class="flex justify-center items-center h-screen">
-    <h1 class="text-4xl font-bold">SCV 파트너스</h1>
-    <p>
-      <a class="text-primary hover:text-secondary" href="/company">π</a>
-    </p>
-  </div>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-primary py-24 md:py-32 px-4 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <!-- Authority Badge -->
+        <div class="inline-flex items-center px-6 py-3 bg-accent text-gray-900 font-bold text-sm rounded-full mb-8 shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          대한민국 1위 의결권 대행 전문회사
+        </div>
+
+        <!-- Main Headlines -->
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+          경영권 분쟁<br>
+          <span class="text-accent">승리의 파트너</span>
+        </h1>
+        
+        <div class="text-2xl md:text-3xl text-gray-300 font-semibold mb-8">
+          SCV 파트너스
+        </div>
+
+        <!-- Power Statement -->
+        <div class="max-w-5xl mx-auto mb-12">
+          <p class="text-xl md:text-2xl text-gray-200 mb-6 leading-relaxed">
+            <span class="text-accent font-bold">5년간 무패 신화</span>를 이어가는 대한민국 최고의 의결권 대행 전문가
+          </p>
+          <p class="text-lg md:text-xl text-gray-300">
+            경영권 위기 상황에서 <strong class="text-white">95% 이상 성공률</strong>로 고객사를 승리로 이끈 입증된 전문성
+          </p>
+        </div>
+
+        <!-- Dramatic Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-black text-accent mb-2">150</div>
+            <div class="text-gray-300 font-semibold">승리한 프로젝트</div>
+            <div class="text-sm text-gray-400">완벽한 성공 기록</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-black text-white mb-2">100<span class="text-accent">%</span></div>
+            <div class="text-gray-300 font-semibold">일반/특별결의</div>
+            <div class="text-sm text-gray-400">단 한 번의 실패도 없이</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-black text-white mb-2">95<span class="text-accent">%+</span></div>
+            <div class="text-gray-300 font-semibold">경영권분쟁 승률</div>
+            <div class="text-sm text-gray-400">위기를 기회로</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-black text-accent mb-2">35</div>
+            <div class="text-gray-300 font-semibold">신뢰하는 기업</div>
+            <div class="text-sm text-gray-400">대기업부터 중견기업까지</div>
+          </div>
+        </div>
+
+        <!-- Urgent CTA -->
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <div class="bg-red-600 text-white px-8 py-4 rounded-lg shadow-2xl">
+            <div class="text-sm font-semibold mb-1">🚨 경영권 위기 긴급상담</div>
+            <div class="text-2xl font-bold"><a href="tel:02-556-2260" class="hover:underline">02-556-2260</a></div>
+            <div class="text-xs opacity-90">24시간 전문가 상담 대기</div>
+          </div>
+          <div class="bg-accent text-gray-900 px-8 py-4 rounded-lg shadow-2xl">
+            <div class="text-sm font-semibold mb-1">💼 전략 상담 신청</div>
+            <div class="text-xl font-bold"><a href="mailto:zinaster@naver.com" class="hover:underline">zinaster@naver.com</a></div>
+            <div class="text-xs opacity-90">무료 초기 분석 서비스</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="border-t border-gray-600 pt-8 mt-8">
+        <div class="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+            </svg>
+            NDA 완벽 보안
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            법무법인 협력
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            성공보수 시스템
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            24시간 비상대기
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Achievements -->
+  <section class="py-16 px-4 bg-primary text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">입증된 전문성</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">무패의 성공 기록</h3>
+          <p class="opacity-90">
+            일반결의 및 특별결의 100% 성공<br>
+            경영권 분쟁에서 95% 이상 성공률 달성
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">대기업 신뢰</h3>
+          <p class="opacity-90">
+            시총 5,000억원 이상 대기업들의<br>
+            경영권 방어 성공 경험 다수 보유
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">5년 전문 경험</h3>
+          <p class="opacity-90">
+            2019년 설립 이후 지속적인 성장<br>
+            5년 이상 경험의 전문가 팀 보유
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Major Success Cases -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">주요 성공 사례</h2>
+      <p class="text-center text-gray-600 mb-12">복잡한 경영권 분쟁에서도 탁월한 성과를 입증한 대표 사례들</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-primary font-bold text-lg">A</span>
+          </div>
+          <h4 class="font-bold text-gray-800 mb-2">에이아이비트</h4>
+          <p class="text-sm text-gray-600">경영권 분쟁 4회 연속 방어 성공</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-secondary font-bold text-lg">S</span>
+          </div>
+          <h4 class="font-bold text-gray-800 mb-2">소리바다</h4>
+          <p class="text-sm text-gray-600">경영권 분쟁 2회 연속 방어 성공</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-accent font-bold text-lg">Y</span>
+          </div>
+          <h4 class="font-bold text-gray-800 mb-2">연이비앤티</h4>
+          <p class="text-sm text-gray-600">6회 주주총회 완벽 수행</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-green-600 font-bold text-lg">상</span>
+          </div>
+          <h4 class="font-bold text-gray-800 mb-2">상방울그룹</h4>
+          <p class="text-sm text-gray-600">그룹사 10회 연속 성공</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Strengths -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">차별화된 경쟁력</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">철저한 보안</h3>
+          <p class="text-gray-600">
+            NDA 기밀유지협약으로<br>
+            고객사 정보 완벽 보호
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">리스크 관리</h3>
+          <p class="text-gray-600">
+            위임장 컴플라이언스 도입<br>
+            법적 책임까지 완벽 대응
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">24시간 지원</h3>
+          <p class="text-gray-600">
+            비상대기팀 운영으로<br>
+            언제든 즉시 대응 가능
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">협력 네트워크</h3>
+          <p class="text-gray-600">
+            법무법인, 회계법인과<br>
+            종합적 협력 시스템
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">전략적 접근</h3>
+          <p class="text-gray-600">
+            맞춤형 전략 수립으로<br>
+            최적의 결과 보장
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">합리적 비용</h3>
+          <p class="text-gray-600">
+            성공 수수료 시스템으로<br>
+            부담 없는 비용 구조
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Portfolio -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">신뢰하는 고객사들</h2>
+      <p class="text-gray-600 mb-8">35개 이상의 고객사가 SCV 파트너스를 선택한 이유</p>
+      
+      <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+        <img src="/clients.png" alt="고객사 포트폴리오" class="mx-auto" />
+      </div>
+      
+      <p class="text-sm text-gray-500 mb-4">
+        * 시총 5,000억원 이상의 중견기업 및 대기업 수행사례도 다수 있으나<br>
+        비밀유지계약(NDA) 체결 관계로 회사이름은 공개하지 않습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 px-4 bg-primary text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">경영권 보호가 필요하신가요?</h2>
+      <p class="text-xl mb-8 opacity-90">
+        5년간 쌓아온 전문성과 95% 이상의 성공률로 고객사의 경영권을 안전하게 보호해드립니다
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white/10 p-6 rounded-lg">
+          <h4 class="font-bold text-lg mb-2">긴급 상담</h4>
+          <p class="text-2xl font-bold"><a href="tel:02-556-2260" class="hover:underline">02-556-2260</a></p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-lg">
+          <h4 class="font-bold text-lg mb-2">이메일 문의</h4>
+          <p class="text-xl"><a href="mailto:zinaster@naver.com" class="hover:underline">zinaster@naver.com</a></p>
+        </div>
+      </div>
+      
+      <p class="text-sm opacity-75">
+        전문 컨설턴트가 24시간 대기 중입니다 • 비밀보장 • 무료 초기 상담
+      </p>
+    </div>
+  </section>
+  
+  <Footer />
 </Layout>

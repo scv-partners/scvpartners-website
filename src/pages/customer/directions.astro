@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/layout.astro'
+import Layout from "../../layouts/layout.astro";
 ---
 
 <Layout category="customer">
@@ -7,11 +7,29 @@ import Layout from '../../layouts/layout.astro'
     <h1 class="text-3xl md:text-4xl font-bold mb-8">오시는길</h1>
 
     <div class="max-w-6xl w-full">
-      <div class="mt-8
-        border-2 border-gray-300 rounded-lg">
+      <div class="mt-8 border-2 border-gray-300 rounded-lg relative">
+        <!-- Map Skeleton Loader -->
+        <div
+          id="mapSkeleton"
+          class="animate-pulse bg-gray-100 h-96 md:h-[440px] flex items-center justify-center"
+        >
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4 animate-pulse"
+            >
+            </div>
+            <div
+              class="h-4 bg-gray-200 rounded w-32 mx-auto mb-2 animate-pulse"
+            >
+            </div>
+            <div class="h-3 bg-gray-200 rounded w-24 mx-auto animate-pulse">
+            </div>
+          </div>
+        </div>
+
         <div
           id="daumRoughmapContainer1734750680429"
-          class="root_daum_roughmap root_daum_roughmap_landing"
+          class="root_daum_roughmap root_daum_roughmap_landing opacity-0 transition-opacity duration-500"
         >
         </div>
       </div>
@@ -20,18 +38,48 @@ import Layout from '../../layouts/layout.astro'
 </Layout>
 
 <script
-  charset="UTF-8"
-  class="daum_roughmap_loader_script"
-  src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+  is:inline></script>
 
-<script charset="UTF-8">
-  const mapWidth = window.innerWidth > 768 ? '1152' : '100%'
-  const mapHeight = window.innerWidth > 768 ? '440' : '360'
+<script is:inline>
+  // Wait for the daum script to be available
+  function initMap() {
+    if (typeof daum !== "undefined" && daum.roughmap) {
+      const mapWidth = window.innerWidth > 768 ? "1152" : "100%";
+      const mapHeight = window.innerWidth > 768 ? "440" : "360";
 
-  new daum.roughmap.Lander({
-    timestamp: '1734750680429',
-    key: '2mk94',
-    mapWidth: mapWidth,
-    mapHeight: mapHeight,
-  }).render()
+      const map = new daum.roughmap.Lander({
+        timestamp: "1734750680429",
+        key: "2mk94",
+        mapWidth: mapWidth,
+        mapHeight: mapHeight,
+      });
+
+      // Render the map
+      map.render();
+
+      // Hide skeleton and show map after a short delay to ensure map is rendered
+      setTimeout(() => {
+        const skeleton = document.getElementById("mapSkeleton");
+        const mapContainer = document.getElementById(
+          "daumRoughmapContainer1734750680429"
+        );
+
+        if (skeleton && mapContainer) {
+          skeleton.style.display = "none";
+          mapContainer.style.opacity = "1";
+        }
+      }, 1000);
+    } else {
+      // Retry if daum is not loaded yet
+      setTimeout(initMap, 100);
+    }
+  }
+
+  // Start initialization after DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMap);
+  } else {
+    initMap();
+  }
 </script>
