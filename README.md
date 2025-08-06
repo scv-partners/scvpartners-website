@@ -1,4 +1,10 @@
-# Astro Starter Kit: Basics
+# SCV Partners Website
+
+[https://scvpartners.kr](https://scvpartners.kr)
+
+---
+
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
