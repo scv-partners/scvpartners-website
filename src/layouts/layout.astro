@@ -1,8 +1,8 @@
 ---
-import Header from '../components/header.astro'
-import Footer from '../components/footer.astro'
-import Hero from '../components/hero.astro'
-import SEO from '../components/SEO.astro'
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Hero from "../components/hero.astro";
+import SEO from "../components/SEO.astro";
 
 export interface Props {
   category?: string;
@@ -13,7 +13,7 @@ export interface Props {
   noindex?: boolean;
 }
 
-const { category, title, description, canonical, image, noindex } = Astro.props
+const { category, title, description, canonical, image, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,13 +22,25 @@ const { category, title, description, canonical, image, noindex } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <SEO 
+    <SEO
       title={title}
       description={description}
       canonical={canonical}
       image={image}
       noindex={noindex}
     />
+    <script
+      defer
+      data-domain="scvpartners.kr"
+      src="https://plausible.starliz.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+    ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
   </head>
   <body>
     <Header />
