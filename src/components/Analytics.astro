@@ -1,0 +1,18 @@
+---
+// Umami tracking tag, in one place because both layouts need it.
+//
+// layout.astro carried this alone, so every content page was tracked and the
+// homepage -- the only page on layout0.astro, and the one most visitors land
+// on -- was not. Splitting it out is what keeps the two from drifting again.
+//
+// is:inline is explicit. Astro already treats a script carrying attributes that
+// way, but saying so states the intent -- this is a third-party tag to emit
+// verbatim, not something to bundle.
+---
+
+<!-- Umami Analytics -->
+<script
+  is:inline
+  defer
+  src="https://umami.starliz.com/script.js"
+  data-website-id="01dd5e41-b126-4438-8c9e-d0dc7d4ea895"></script>

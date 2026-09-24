@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/footer.astro'
 import SEO from '../components/SEO.astro'
+import Analytics from '../components/Analytics.astro'
 
 export interface Props {
   title?: string;
@@ -26,6 +27,7 @@ const { title, description, canonical, image, noindex } = Astro.props
       image={image}
       noindex={noindex}
     />
+    <Analytics />
   </head>
   <body>
     <slot />

@@ -3,6 +3,7 @@ import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Hero from "../components/hero.astro";
 import SEO from "../components/SEO.astro";
+import Analytics from "../components/Analytics.astro";
 
 export interface Props {
   category?: string;
@@ -29,13 +30,7 @@ const { category, title, description, canonical, image, noindex } = Astro.props;
       image={image}
       noindex={noindex}
     />
-    <!-- Umami Analytics -->
-    <script
-      is:inline
-      defer
-      src="https://umami.starliz.com/script.js"
-      data-website-id="01dd5e41-b126-4438-8c9e-d0dc7d4ea895"
-    ></script>
+    <Analytics />
   </head>
   <body>
     <Header />
