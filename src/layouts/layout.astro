@@ -29,18 +29,13 @@ const { category, title, description, canonical, image, noindex } = Astro.props;
       image={image}
       noindex={noindex}
     />
+    <!-- Umami Analytics -->
     <script
+      is:inline
       defer
-      data-domain="scvpartners.kr"
-      src="https://plausible.starliz.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+      src="https://umami.starliz.com/script.js"
+      data-website-id="01dd5e41-b126-4438-8c9e-d0dc7d4ea895"
     ></script>
-    <script>
-      window.plausible =
-        window.plausible ||
-        function () {
-          (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-    </script>
   </head>
   <body>
     <Header />
